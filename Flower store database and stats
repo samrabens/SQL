@@ -1,0 +1,25 @@
+--create a flower store data base 
+
+CREATE TABLE flowers(ID INTEGER PRIMARY KEY,  AISLE INTEGER, TYPE TEXT, PRICE INTEGER, COLOR TEXT);   
+
+INSERT INTO flowers VALUES (1, "sunflowers", 2, 9, "yellow");
+INSERT INTO flowers VALUES (2, "roses", 3, 10, "red");
+INSERT INTO flowers VALUES (3, "roses", 3, 8, "yellow");
+INSERT INTO flowers VALUES (4, "roses", 3, 11, "white");
+INSERT INTO flowers VALUES (5, "tulips", 2, 13, "pink");
+INSERT INTO flowers VALUES (6, "tulips", 2, 12, "purple");
+INSERT INTO flowers VALUES (7, "tulips", 2, 11, "red");
+INSERT INTO flowers VALUES (8, "lilies", 4, 15, "yellow");
+INSERT INTO flowers VALUES (9, "lilies", 4, 14, "white");
+INSERT INTO flowers VALUES (10, "lilies", 4, 16, "purple");
+INSERT INTO flowers VALUES (11, "daisies", 2, 15, "orange");
+INSERT INTO flowers VALUES (12, "daisies", 2, 14, "pink");
+INSERT INTO flowers VALUES (13, "daisies", 2, 16, "red");
+INSERT INTO flowers VALUES (14, "daisies", 2, 15, "yellow");
+INSERT INTO flowers VALUES (15, "daisies", 2, 14, "white");
+
+--display the database ordered by aisle
+SELECT * FROM flowers ORDER BY AISLE;
+
+--display the database sum of all flowers
+SELECT SUM(PRICE) FROM flowers
